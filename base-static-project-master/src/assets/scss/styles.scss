@@ -66,6 +66,7 @@ $breakSNoUnit: 768;
 body {
   font-family: 'Barlow';
   color: #808080;
+  margin-top: 130px;
 }
 .nav-bar {
   border-bottom: 1px solid #808080;
@@ -76,6 +77,7 @@ body {
   left: 0;
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 .logo img {

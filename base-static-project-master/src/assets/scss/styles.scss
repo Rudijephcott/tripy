@@ -155,12 +155,17 @@ body {
   color: #112B3C;
   font-size: 64px;
 }
-.media-block-large {
+.media-block-container {
+  display: inline-block;
   margin-top: 185px;
+}
+.media-block-large {
+  
+  display: inline-block;
 }
 .media-block-large img {
   border-radius: 200px 200px 0px 0px;
 }
 .media-block-small img {
-  border-radius: 200px 200px 0px 0px;
+  border-radius: 250px;
 }

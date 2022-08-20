@@ -95,21 +95,25 @@ body {
   display:inline-flex;
 
 }
-.target {
-  position: absolute;
-  border-bottom: 4px solid transparent;
-  z-index: -1;
-  transform: translateX(-60px);
-}
- 
-.nav-items a,
-.target {
-  transition: all .35s ease-in-out;
-}
+// .target {
+//   position: absolute;
+//   border-bottom: 4px solid transparent;
+//   z-index: -1;
+//   transform: translateX(-60px);
+// }
+// // .nav-items li:not(:last-child) {
+// //   margin-right: 20px;
+// // }
+
+// .nav-items a,
+// .target {
+//   transition: all .35s ease-in-out;
+// }
 .nav-items a {
   text-decoration: none;
   font-size: 20px; 
   color: #808080;
+  transition: all .35s ease-in-out;
 }
 
 .nav-items a:hover {

@@ -66,7 +66,7 @@ $breakSNoUnit: 768;
 body {
   font-family: 'Barlow';
   color: #808080;
-  margin-top: 130px;
+  
 }
 .nav-bar {
   border-bottom: 1px solid #808080;
@@ -147,4 +147,20 @@ body {
   background-color: white;
   color: #E61C5D;
   border: 1px solid #E61C5D;
+}
+.text-box {
+  margin-top: 260px;
+}
+.text-box h1 {
+  color: #112B3C;
+  font-size: 64px;
+}
+.media-block-large {
+  margin-top: 185px;
+}
+.media-block-large img {
+  border-radius: 200px 200px 0px 0px;
+}
+.media-block-small img {
+  border-radius: 200px 200px 0px 0px;
 }

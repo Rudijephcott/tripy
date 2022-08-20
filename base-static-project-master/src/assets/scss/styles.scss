@@ -70,7 +70,14 @@ body {
 .nav-bar {
   border-bottom: 1px solid #808080;
   padding: 38px 0px;
+  overflow: hidden;
+  background-color: white;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
 }
+
 .logo img {
   width: 55px;
   height: 29px;
@@ -88,14 +95,28 @@ body {
   display:inline-flex;
 
 }
-.nav-items li a {
+.target {
+  position: absolute;
+  border-bottom: 4px solid transparent;
+  z-index: -1;
+  transform: translateX(-60px);
+}
+ 
+.nav-items a,
+.target {
+  transition: all .35s ease-in-out;
+}
+.nav-items a {
   text-decoration: none;
   font-size: 20px; 
   color: #808080;
 }
-.nav-items li a:hover {
-  color: black;
 
+.nav-items a:hover {
+  color: black;
+  font-weight: 500;
+  border-bottom: 4px solid #E61C5D;
+  border-radius: 4px;
 }
 .register-container {
   display: flex;
@@ -105,7 +126,7 @@ body {
   display: inline-flex;
   column-gap: 30px;
 }
-.register li a {
+.register a {
   text-decoration: none;
   font-size: 20px; 
 }

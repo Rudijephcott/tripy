@@ -267,9 +267,11 @@ body {
 .stat-container {
   display: flex;
   padding-top: 24px;
+  // padding-right: 24px;
+  justify-content: space-between;
 }
 .stats {
-  flex-grow: 1;
+  flex-basis: 100px;
 }
 .stat-num {
   color: #E61C5D;
@@ -278,5 +280,13 @@ body {
 }
 .stat-text {
   font-size: 16px;
+}
+.carousel {
+  display: flex;
+  justify-content: space-between;
+}
+.carousel-arrows {
+  align-self: flex-end;
+  
 }
 

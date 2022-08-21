@@ -10,7 +10,7 @@ document.addEventListener("keyup", function (e) {
       let targetElement = $(this.hash);
       if (targetElement.length) {
       event.preventDefault();
-      let targetCalc = targetElement.offset().top - 50;
+      let targetCalc = targetElement.offset().top - 140;
       $('html, body').animate({
         scrollTop: targetCalc
       }, 1000);

@@ -199,20 +199,30 @@ body {
 //   transition: ;
 // }
 .text-box {
-  margin-top: 260px;
+  margin-top: 290px;
+
+  &.top {
+    margin-top: 260px;
+  }
 }
+
 .text-box h1 {
   color: #112B3C;
   font-size: 64px;
 }
 .media-block-container {
   display: inline-block;
-  margin-top: 185px;
+  margin-top: 134px;
   position: relative;
+
+  &.top {
+    margin-top: 185px;
+  }
 }
 
 .media-block {
   overflow: hidden;
+  
   &.small {
     border-radius: 250px;
     position: absolute;
@@ -223,6 +233,19 @@ body {
   &.large {
     border-radius: 200px 200px 0px 0px;
     width: 80%;
+  }
+  &.small-2 {
+    border-radius: 250px;
+    position: absolute;
+    bottom: -96px;
+    right: -64px;
+    border: 8px solid white;
+    width: 68%;
+  }
+  &.large-2 {
+    border-radius: 200px;
+    width: 85%;
+    
   }
   &.portrait {
     aspect-ratio: 9 / 16;
@@ -235,5 +258,10 @@ body {
     object-fit: cover;
   } 
 }
-
+.purple-header {
+  color: #E61C5D;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
 

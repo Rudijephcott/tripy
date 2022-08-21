@@ -264,4 +264,19 @@ body {
   font-weight: bold;
   letter-spacing: 2px;
 }
+.stat-container {
+  display: flex;
+  padding-top: 24px;
+}
+.stats {
+  flex-grow: 1;
+}
+.stat-num {
+  color: #E61C5D;
+  font-size: 40px;
+  font-weight: bold;
+}
+.stat-text {
+  font-size: 16px;
+}
 

@@ -78,6 +78,7 @@ body {
   position: fixed;
   width: 100%;
   z-index: 1;
+
 }
 
 .logo img {
@@ -95,7 +96,8 @@ body {
   column-gap: 40px;
   flex-wrap: wrap;
   display:inline-flex;
-
+  position: relative;
+  
 }
 // .target {
 //   position: absolute;
@@ -115,14 +117,35 @@ body {
   text-decoration: none;
   font-size: 20px; 
   color: #808080;
-  transition: all .35s ease-in-out;
-}
+  // width   : 200px;
+  // height  : 25px;   
+  position: relative;
+  z-index : 1;
 
+  // transition: all .35s ease-in-out;
+}
+.nav-items a::after {
+  background-color: #E61C5D;
+  content: "";
+  width: 0;
+  height: 4px;
+  left: 33%;
+  bottom: -8px;
+  transition: width 0.35s ease 0s;
+  position: absolute;
+  border-radius: 20px;
+}
+.nav-items a:hover::after {
+  width: 33%;
+ 
+}
 .nav-items a:hover {
   color: black;
   font-weight: 500;
-  border-bottom: 4px solid #E61C5D;
-  border-radius: 4px;
+  transition: color 1.2s ease 0s,
+  font-weight 1.2s ease 0s;
+  padding: -1px;
+  
 }
 .register-container {
   display: flex;
@@ -135,6 +158,28 @@ body {
 .register a {
   text-decoration: none;
   font-size: 20px; 
+  position: relative;
+  z-index : 1;
+}
+.login-button a::after {
+  background-color: #E61C5D;
+  content: "";
+  width: 0;
+  height: 4px;
+  left: 33%;
+  bottom: -8px;
+  transition: width 0.35s ease 0s;
+  position: absolute;
+  border-radius: 20px;
+}
+.login-button a:hover::after {
+  width: 33%;
+}
+.login-button a:hover {
+  color: black;
+  font-weight: 500;
+  transition: color 1.2s ease 0s,
+  font-weight 1.2s ease 0s;
 }
 
 .red-button a {
@@ -147,7 +192,12 @@ body {
   background-color: white;
   color: #E61C5D;
   border: 1px solid #E61C5D;
+  padding: 18px 23px;
+  transition: color 0.65s ease 0s, background-color 0.65s ease 0s;
 }
+// .red-button a:hover::after {
+//   transition: ;
+// }
 .text-box {
   margin-top: 260px;
 }
@@ -158,14 +208,32 @@ body {
 .media-block-container {
   display: inline-block;
   margin-top: 185px;
+  position: relative;
 }
-.media-block-large {
-  
-  display: inline-block;
+
+.media-block {
+  overflow: hidden;
+  &.small {
+    border-radius: 250px;
+    position: absolute;
+    bottom: 79px;
+    right: 0px;
+    border: 8px solid white;
+  }
+  &.large {
+    border-radius: 200px 200px 0px 0px;
+    width: 80%;
+  }
+  &.portrait {
+    aspect-ratio: 9 / 16;
+  }
+
+  img {
+    /* COVER PARENT DIV AND FILL SPACE */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } 
 }
-.media-block-large img {
-  border-radius: 200px 200px 0px 0px;
-}
-.media-block-small img {
-  border-radius: 250px;
-}
+
+

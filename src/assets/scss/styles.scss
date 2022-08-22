@@ -185,6 +185,7 @@ body {
 }
 
 .red-button a {
+  text-decoration: none;
   color: white;
   background-color: #E61C5D;
   padding: 18px 24px;
@@ -303,24 +304,89 @@ body {
   .slide {
     width: calc((100% - (2 * var(--gutter))) / 3);
     margin-right: var(--gutter);
-    background-color: #dddada;
+    background-color: white;
   }
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slide-2 {
+    width: calc((100% - (2 * var(--gutter))) / 3);
+    margin-right: var(--gutter);
+    background-color: white;
+    text-align: center;
+  }
+  .slide-2 img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+ 
 }
 .carousel-arrows {
   margin-top: 380px;
-  align-self: flex-end;
-  
 }
+
 .carousel-arrows img {
   display: inline-block;
   padding-left: 12px;
 }
-#slider {
-  height: 500px;
-  border: 1px solid black;
+.carousel-arrows img:hover {
+  cursor: pointer;
+}
+.slide-header {
+  font-size: 20px;
+  font-weight: bold;
+  color: #112B3C;
+  padding-top: 20px;
+  padding: 20px 26px 0px 26px;
+}
+.slide-location {
+  font-size: 14px;
+  font-weight: 400;
+  color: #112B3C;
+  padding: 8px 26px 0px 26px;
+}
+.slide-rating {
+  padding: 8px 26px 0px 26px;
+  color: #FFBD39;
+  font-weight: bold;
+}
+.price-time {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0px 0px 26px;
+  align-items: flex-end;
+}
+.slide-num {
+  font-size: 26px;
+  font-weight: bold;
+  color: #E61C5D;
+}
+.testimonial-text {
+  text-align: center;
 }
 
 
-.testimonial-text {
-  text-align: center;
+.slide-name {
+  color: #112B3C;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 12px;
+}
+.slide-job {
+  color: #112B3C;
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 8px;
+}
+.slide-testimonial {
+  color: #112B3C;
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 12px;
+}
+#Price {
+  padding-top: 50px;
 }

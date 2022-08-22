@@ -20,12 +20,23 @@ $(document).ready(function () {
     }
   });
 
-  $('.carousel').flickity({
+  var $carousel = $('.carousel').flickity({
   // options
   cellAlign: 'left',
   contain: true,
   pageDots: false,
-  prevNextButtons: false
+  prevNextButtons: false,
+  wrapAround: true
+});
+
+// previous wrapped
+$('.carousel-arrows .previous').on( 'click', function() {
+  $carousel.flickity( 'previous', true );
+});
+
+// next wrapped
+$('.carousel-arrows .next').on( 'click', function() {
+  $carousel.flickity( 'next', true );
 });
 
 });

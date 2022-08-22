@@ -129,7 +129,8 @@ body {
   content: "";
   width: 0;
   height: 4px;
-  left: 33%;
+  left: 50%;
+  transform: translate(-50%, 0%);
   bottom: -8px;
   transition: width 0.35s ease 0s;
   position: absolute;
@@ -166,7 +167,8 @@ body {
   content: "";
   width: 0;
   height: 4px;
-  left: 33%;
+  left: 50%;
+  transform: translate(-50%, 0%);
   bottom: -8px;
   transition: width 0.35s ease 0s;
   position: absolute;
@@ -296,8 +298,13 @@ body {
   font-size: 16px;
 }
 .carousel {
-  display: flex;
-  justify-content: space-between;
+  margin-top: 80px;
+
+  .slide {
+    width: calc((100% - (2 * var(--gutter))) / 3);
+    margin-right: var(--gutter);
+    background-color: #dddada;
+  }
 }
 .carousel-arrows {
   margin-top: 380px;

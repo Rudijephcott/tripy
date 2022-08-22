@@ -1,11 +1,9 @@
 .columns {
   display: flex;
   flex-wrap: wrap;
-  // padding: 0 var(--pageMarginTotal);
-  padding: 0px 135px;
+  padding: 0 var(--pageMarginTotal);
   width: 100%;
-  // column-gap: var(--gutter);
-  column-gap: 30px;
+  column-gap: var(--gutter);
   --columns: 12;
 
   .columns {

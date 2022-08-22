@@ -5,6 +5,7 @@ document.addEventListener("keyup", function (e) {
 });
 
 $(document).ready(function () {
+
   $(".nav-bar a").click(function (event) {
     let targetElement = $(this.hash);
     if (targetElement.length) {
@@ -13,12 +14,23 @@ $(document).ready(function () {
       $("html, body").animate(
         {
           scrollTop: targetCalc,
-        },
+        }, 
         1000
       );
     }
   });
+
+  $('.carousel').flickity({
+  // options
+  cellAlign: 'left',
+  contain: true,
+  pageDots: false,
+  prevNextButtons: false
 });
+
+});
+
+
 
 // (function() {
 

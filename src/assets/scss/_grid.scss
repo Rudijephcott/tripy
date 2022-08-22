@@ -1,9 +1,11 @@
 .columns {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 var(--pageMarginTotal);
+  // padding: 0 var(--pageMarginTotal);
+  padding: 0px 135px;
   width: 100%;
-  column-gap: var(--gutter);
+  // column-gap: var(--gutter);
+  column-gap: 30px;
   --columns: 12;
 
   .columns {
@@ -553,7 +555,7 @@
 .col-m-23,
 .col-m-24 {
   @media all and (max-width: $breakS) {
-    --span: 16;
+    --span: 12;
   }
 }
 

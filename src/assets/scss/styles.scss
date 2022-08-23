@@ -306,25 +306,18 @@ body {
     width: calc((100% - (2 * var(--gutter))) / 3);
     margin-right: var(--gutter);
     background-color: white;
-    height: 600px;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: stretch;
-    justify-content: start;
-    align-content: stretch;
     border-radius: 16px;
     box-shadow: 0px 0px 20px #808080;
-
+    .slide-img {
+      aspect-ratio: 37 / 31;
+    }
 
     .slide-content {
       display: flex;
-      flex-flow: column wrap;
+      flex-direction: column;
       justify-content: space-between;
-      
-      .price-time, .slide-header, .slide-location, .slide-rating {
-        flex: 1;
-      }
-      border: 1px solid black;
+      height: 100%;
+      padding-bottom: 18px;
     }
   }
   .slide img {

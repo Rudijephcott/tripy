@@ -39,6 +39,20 @@ $('.carousel-arrows .next').on( 'click', function() {
   $carousel.flickity( 'next', true );
 });
 
+// variable for highest height
+let maxHeight = 0; 
+
+// defining what im looping through, which in this case is .each .slide inside of .carousel
+$('.carousel .slide-content').each(function() {
+  // this is referring to the slide in question thats being looped through
+  let thisHeight = $(this).outerHeight(true);
+  // simple if loop
+  if (thisHeight > maxHeight) {
+    maxHeight = thisHeight;
+  }
+});
+$('.carousel .slide-content').css({'height': maxHeight + 'px'});
+
 });
 
 

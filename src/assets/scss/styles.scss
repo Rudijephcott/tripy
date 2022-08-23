@@ -299,6 +299,9 @@ body {
 .stat-text {
   font-size: 16px;
 }
+.page-module {
+  overflow: hidden;
+}
 .carousel {
   margin-top: 80px;
   
@@ -409,6 +412,11 @@ body {
   padding: 8px 26px 0px 26px;
   color: #FFBD39;
   font-weight: bold;
+  background-color: rgba($color: #FFBD39, $alpha: 0.12);
+  display: inline-flex;
+  border-radius: 38px;
+  align-items: center;
+  gap: 5px;
 }
 .price-time {
   display: flex;

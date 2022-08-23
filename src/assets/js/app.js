@@ -26,7 +26,7 @@ $(document).ready(function () {
   contain: true,
   pageDots: false,
   prevNextButtons: false,
-  wrapAround: true
+  wrapAround: false
 });
 
 // previous wrapped

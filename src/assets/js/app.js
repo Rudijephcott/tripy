@@ -20,6 +20,22 @@ $(document).ready(function () {
     }
   });
 
+  $(".mobile-menu-link a").click(function() {
+
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+       $(".nav-items-container").removeClass('show');
+       $(".register-container").removeClass('show');
+    } else { 
+      $(this).addClass('active');
+      $(".nav-items-container").addClass('show');
+      $(".register-container").addClass('show');
+     
+    }
+    return false;
+  })
+
+
   var $carousel = $('.carousel').flickity({
   // options
   cellAlign: 'left',

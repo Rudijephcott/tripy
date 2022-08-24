@@ -70,7 +70,7 @@ body {
   
 }
 .nav-bar {
-  padding: 38px 0px;
+  padding: 20px 0px;
   overflow: hidden;
   background-color: white;
   top: 0;
@@ -79,6 +79,53 @@ body {
   width: 100%;
   z-index: 1;
   box-shadow: 0px 0px 20px #808080;
+  
+
+}
+.nav-bar .columns {
+  align-items: center;
+}
+.mobile-menu-container {
+  display: none;
+  @media all and (max-width:$breakS){
+    display: block;
+  }
+  
+}
+.mobile-menu-link {
+  display: flex;
+  justify-content: flex-end;
+
+  a {
+    position: relative;
+    font-size: 20px;
+    color:#112B3C;
+    
+    &.active {
+      
+      .icon-close {
+        opacity: 1;
+        transform: translate(-50%, -60%) rotate(-90deg);
+      }
+      .icon-menu {
+        opacity: 0;
+        transform: rotate(-90deg);
+      }
+    
+    }
+  }
+  .icon-close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    opacity: 0;
+    
+  }
+  .icon-close, .icon-menu {
+    transition: all 0.3s;
+  }
+  
 }
 
 .logo img {
@@ -89,7 +136,14 @@ body {
 .nav-items-container {
   display: flex;
   justify-content: center;
+  @media all and (max-width:$breakS) {
+    display: none;
+    &.show {
+      display: flex;
+    }
+  }
 }
+
 .nav-items {
   list-style: none;
   align-self: center;
@@ -97,6 +151,15 @@ body {
   flex-wrap: wrap;
   display:inline-flex;
   position: relative;
+
+  @media all and (max-width:$breakS){
+    column-gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    
+  }
   
 }
 // .target {
@@ -122,7 +185,7 @@ body {
   position: relative;
   z-index : 1;
   letter-spacing: 0.235px;
- 
+  
 
   // transition: all .35s ease-in-out;
 }
@@ -153,10 +216,20 @@ body {
 .register-container {
   display: flex;
   justify-content: flex-end;
+  @media all and (max-width:$breakS) {
+    display: none;
+    &.show {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      // margin-bottom: ;
+    }
+  }
 }
 .register {
   display: inline-flex;
   column-gap: 30px;
+  align-items: center;
 }
 .register a {
   text-decoration: none;
@@ -187,6 +260,7 @@ body {
 }
 
 .red-button a {
+  display: inline-block;
   text-decoration: none;
   color: white;
   background-color: #E61C5D;
@@ -205,9 +279,14 @@ body {
 // }
 .text-box {
   margin-top: 290px;
-
+  @media all and (max-width:$breakS) {
+    margin-top: 120px;
+  }
   &.top {
     margin-top: 260px;
+    @media all and (max-width:$breakS) {
+      margin-top: 130px;
+    }
   }
   &.center {
     text-align: center;
@@ -217,10 +296,16 @@ body {
 .text-box h1 {
   color: #112B3C;
   font-size: 64px;
+  @media all and (max-width:$breakS) {
+    font-size: 32px;
+  }
 }
 .text-box h2 {
   padding-top: 32px;
   font-weight: 400;
+  @media all and (max-width:$breakS) {
+    font-size: 18px;
+  }
 }
 .media-block-container {
   display: inline-block;
@@ -230,7 +315,9 @@ body {
   &.top {
     margin-top: 185px;
     width: 100%;
-    
+    @media all and (max-width:$breakS) {
+      margin-top: 50px;
+    }
   }
   &.middle {
     width: 80%;
@@ -306,6 +393,11 @@ body {
 .carousel {
   margin-top: 80px;
   margin-bottom: 80px;
+  @media all and (max-width:$breakS) {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+ 
   
   .flickity-viewport {
     overflow: visible;
@@ -318,6 +410,10 @@ body {
     background-color: white;
     border-radius: 16px;
     box-shadow: 0px 0px 20px #808080;
+    @media all and (max-width:$breakS) {
+      width: calc((100% - (2 * var(--gutter))) / 1);
+
+    }
     
     .slide-img {
       aspect-ratio: 37 / 31;
@@ -329,7 +425,6 @@ body {
       justify-content: space-between;
       height: 100%;
       padding: 18px 26px;
-      
     }
   }
   .slide img {
@@ -351,6 +446,10 @@ body {
     height: 350px;
     border-radius: 16px;
     box-shadow: 0px 0px 20px #808080;
+    @media all and (max-width:$breakS) {
+      width: calc((100% - (2 * var(--gutter))) / 1);
+
+    }
     
     .slide-content {
       padding: 0px 40px 60px 40px;
@@ -369,7 +468,9 @@ body {
 .carousel-arrows {
   margin-top: 380px;
   position: relative;
-  
+  @media all and (max-width:$breakS) {
+    margin-top: 130px;
+  }
 
   &.alt-2 {
     position: absolute;
@@ -400,7 +501,7 @@ body {
 .quote-container-2 {
 position: relative;
 padding: 10px;
-left: 164px;
+right: 30px;
 top: -6px;
   svg {
     height: 33.33px;
@@ -502,11 +603,19 @@ top: -6px;
     font-size: 18px;
     font-weight: bold;
     padding: 13px 0px 8px 10px;
+    @media all and (max-width:$breakS) {
+      font-size: 12px;
+
+    }
   }
   &.small {
     font-size: 14px;
     font-weight: bold;
     padding: 13px 0px 8px 10px;
+    @media all and (max-width:$breakS) {
+      font-size: 8px;
+
+    }
   }
 }
 .price-time-container {
@@ -517,6 +626,10 @@ top: -6px;
 .price {
   color: #E61C5D;
   padding-left: 10px;
+  @media all and (max-width:$breakS) {
+    font-size: 12px;
+ 
+   }
 
   &.big {
   font-size: 20px;
@@ -532,6 +645,10 @@ top: -6px;
 .time {
   padding-left: 15px;
   margin-top: 3px;
+  @media all and (max-width:$breakS) {
+    font-size: 12px;
+    padding-left: 10px;
+   }
   &.big {
   font-size: 14px;
   font-weight: 500;
@@ -545,6 +662,12 @@ top: -6px;
   font-size: 18px;
   font-weight: bold;
   color: #112B3C;
+  @media all and (max-width:$breakS) {
+   
+    padding-bottom: 30px;
+    margin-right: 30px;
+ 
+   }
 }
 
 .starter-block, .center-block {
@@ -553,10 +676,41 @@ top: -6px;
   font-size: 14px;
   font-weight: 400;
   color: #112B3C;
+  justify-content: center;
    li {
     padding-bottom: 18px;
+    @media all and (max-width:$breakS) {
+      padding-bottom: 6px;
+      
+    }
   }
-  
+  @media all and (max-width:$breakS) {
+   margin-top: 40px;
+   padding-bottom: 30px;
+   margin-right: 40px;
+
+  }
+  .center-block {
+    @media all and (max-width:$breakS) {
+      margin-left: 30px;
+   
+     }
+  }
+  .start-block {
+    @media all and (max-width:$breakS) {
+      margin-top: 0;
+      padding-bottom: 30px;
+      margin-right: 0;
+      display: flex;
+      
+     }
+     li {
+      @media all and (max-width:$breakS) {
+        align-self: center;
+     
+       }
+     }
+  }
 }
 .starter-block li svg{
   width: 24px;
@@ -577,6 +731,17 @@ top: -6px;
   font-size: 14px;
   font-weight: 400;
   color: #112B3C;
+  @media all and (max-width:$breakS) {
+    margin-top: 40px;
+    padding-bottom: 70px;
+    margin-left: 30px;
+  }
+}
+
+.footer-flex {
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 .footer-header {
   padding-bottom: 18px;

@@ -582,7 +582,7 @@
 .offset-23 {
   @media all and (max-width: $breakS) {
     --offset: 0;
-    margin-left: 0;
+    margin-left: 0 !important;
   }
 }
 

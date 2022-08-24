@@ -70,7 +70,6 @@ body {
   
 }
 .nav-bar {
-  border-bottom: 1px solid #dddada;
   padding: 38px 0px;
   overflow: hidden;
   background-color: white;
@@ -79,7 +78,7 @@ body {
   position: fixed;
   width: 100%;
   z-index: 1;
-
+  box-shadow: 0px 0px 20px #808080;
 }
 
 .logo img {
@@ -326,7 +325,8 @@ body {
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
-      padding-bottom: 18px;
+      padding: 18px 26px;
+      
     }
   }
   .slide img {
@@ -399,17 +399,16 @@ body {
   font-size: 20px;
   font-weight: bold;
   color: #112B3C;
-  padding-top: 20px;
-  padding: 20px 26px 0px 26px;
+  
 }
 .slide-location {
   font-size: 14px;
   font-weight: 400;
   color: #112B3C;
-  padding: 8px 26px 0px 26px;
+  padding-top: 8px;
 }
 .slide-rating {
-  padding: 8px 26px 0px 26px;
+  padding: 4px 6px;
   color: #FFBD39;
   font-weight: bold;
   background-color: rgba($color: #FFBD39, $alpha: 0.12);
@@ -421,7 +420,7 @@ body {
 .price-time {
   display: flex;
   justify-content: space-between;
-  padding: 8px 26px 0px 26px;
+  padding-top: 8px;
   align-items: flex-end;
 }
 .slide-num {
@@ -451,7 +450,7 @@ body {
   font-size: 14px;
   font-weight: 400;
 }
-#Price {
+.text-box .red-button {
   padding-top: 50px;
 }
 .big-container {
@@ -543,4 +542,50 @@ body {
    li {
     padding-bottom: 18px;
   }
+  
+}
+.starter-block li svg{
+  width: 24px;
+  height: 24px;
+  color: #E61C5D;
+  margin-right: 12px;
+}
+.stars {
+  color: #FFBD39;
+  padding-top: 4px;
+  padding-bottom: 12px;
+  
+}
+.quote-container-2 {
+position: relative;
+padding: 10px;
+left: 164px;
+top: -6px;
+  svg {
+    height: 33.33px;
+    width: 33.33px;
+    z-index: 1;
+    color: #E61C5D;
+  }
+}
+.email-button {
+  padding: 10px 0px 10px 10px;
+  display: inline-flex;
+  box-shadow: 0px 0px 20px #808080;
+  border-radius: 55px;
+  width: fit-content;
+}
+.email-button input {
+  margin-right: 32px;
+  border: none;
+  
+}
+.email-button svg {
+  height: 32px;
+  width: 32px;
+  background-color: #E61C5D;
+  color: #FDFDFD;
+  padding: 3px;
+  border-radius: 50%;
+  
 }

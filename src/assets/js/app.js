@@ -10,7 +10,7 @@ $(document).ready(function () {
     let targetElement = $(this.hash);
     if (targetElement.length) {
       event.preventDefault();
-      let targetCalc = targetElement.offset().top - 140;
+      let targetCalc = targetElement.offset().top - 125;
       $("html, body").animate(
         {
           scrollTop: targetCalc,

@@ -290,6 +290,9 @@ body {
   }
   &.center {
     text-align: center;
+    @media all and (max-width:$breakS) {
+      margin-top: 40px;
+    }
   }
 }
 
@@ -469,16 +472,25 @@ body {
   margin-top: 380px;
   position: relative;
   @media all and (max-width:$breakS) {
-    margin-top: 130px;
+    margin-top: 100px;
   }
 
   &.alt-2 {
     position: absolute;
     transform: translate(0px, -145px);
+     @media all and (max-width:$breakS) {
+     margin-top: 130px;
+     display: none;
+  }
   }
  
   &.alt {
     margin-top: 30px;
+    @media all and (max-width:$breakS) {
+      margin-top: 130px;
+      display: none;
+   }
+    
 
     img {
       position: absolute;
@@ -501,8 +513,12 @@ body {
 .quote-container-2 {
 position: relative;
 padding: 10px;
-right: 30px;
+left: 145px;
 top: -6px;
+@media all and (max-width:$breakS) {
+  top: 26px;
+  left: 60px;
+}
   svg {
     height: 33.33px;
     width: 33.33px;
@@ -605,7 +621,7 @@ top: -6px;
     padding: 13px 0px 8px 10px;
     @media all and (max-width:$breakS) {
       font-size: 12px;
-
+      padding: 4px 0 4px 4px;
     }
   }
   &.small {
@@ -613,13 +629,20 @@ top: -6px;
     font-weight: bold;
     padding: 13px 0px 8px 10px;
     @media all and (max-width:$breakS) {
-      font-size: 8px;
+      font-size: 12px;
+      padding: 4px 0 4px 4px;
 
     }
   }
 }
 .price-time-container {
   display:inline-flex;
+  @media all and (max-width:$breakS) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+   }
 
   
 }
@@ -627,35 +650,55 @@ top: -6px;
   color: #E61C5D;
   padding-left: 10px;
   @media all and (max-width:$breakS) {
-    font-size: 12px;
- 
+    font-size: 8px;
+    
    }
 
   &.big {
   font-size: 20px;
   font-weight: bold;
   padding-bottom: 10px;
+  @media all and (max-width:$breakS) {
+    font-size: 12px;
+    padding-bottom: 4px;
+ 
+   }
 }
   &.small {
   font-size: 16px;
   font-weight: bold;
   padding-bottom: 15px;
+  @media all and (max-width:$breakS) {
+    font-size: 12px;
+    padding-bottom: 4px;
+   }
   }
 }
 .time {
   padding-left: 15px;
   margin-top: 3px;
   @media all and (max-width:$breakS) {
-    font-size: 12px;
-    padding-left: 10px;
+    font-size: 10px;
+    padding-left: 4px;
+    margin-top: 0px;
    }
   &.big {
   font-size: 14px;
   font-weight: 500;
+  @media all and (max-width:$breakS) {
+    font-size: 10px;
+    margin-top: 0px;
+    padding-left: 4px;
+   }
 }
   &.small {
   font-size: 10px;
   font-weight: 500;
+  @media all and (max-width:$breakS) {
+    font-size: 10px;
+    margin-top: 0px;
+    padding-left: 6px;
+   }
   }
 }
 .footer-header {

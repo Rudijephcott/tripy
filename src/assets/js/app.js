@@ -16,6 +16,11 @@ $(document).ready(function () {
         },
         1000
       );
+      if ($(".mobile-menu-link a").hasClass("active")) {
+        $(".mobile-menu-link a").removeClass("active");
+        $(".nav-items-container").removeClass("show");
+        $(".register-container").removeClass("show");
+      }
     }
   });
 
@@ -29,6 +34,7 @@ $(document).ready(function () {
       $(".nav-items-container").addClass("show");
       $(".register-container").addClass("show");
     }
+
     return false;
   });
 

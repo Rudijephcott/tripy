@@ -5,7 +5,6 @@ document.addEventListener("keyup", function (e) {
 });
 
 $(document).ready(function () {
-
   $(".nav-bar a").click(function (event) {
     let targetElement = $(this.hash);
     if (targetElement.length) {
@@ -14,64 +13,59 @@ $(document).ready(function () {
       $("html, body").animate(
         {
           scrollTop: targetCalc,
-        }, 
+        },
         1000
       );
     }
   });
 
-  $(".mobile-menu-link a").click(function() {
-
-    if ($(this).hasClass('active')) {
-      $(this).removeClass('active');
-       $(".nav-items-container").removeClass('show');
-       $(".register-container").removeClass('show');
-    } else { 
-      $(this).addClass('active');
-      $(".nav-items-container").addClass('show');
-      $(".register-container").addClass('show');
-     
+  $(".mobile-menu-link a").click(function () {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+      $(".nav-items-container").removeClass("show");
+      $(".register-container").removeClass("show");
+    } else {
+      $(this).addClass("active");
+      $(".nav-items-container").addClass("show");
+      $(".register-container").addClass("show");
     }
     return false;
-  })
+  });
 
+  var $carousel = $(".carousel").flickity({
+    // options
+    cellAlign: "left",
+    contain: true,
+    pageDots: false,
+    prevNextButtons: false,
+    wrapAround: false,
+  });
 
-  var $carousel = $('.carousel').flickity({
-  // options
-  cellAlign: 'left',
-  contain: true,
-  pageDots: false,
-  prevNextButtons: false,
-  wrapAround: false
+  // previous wrapped
+  $(".carousel-arrows .previous").on("click", function () {
+    $carousel.flickity("previous", true);
+  });
+
+  // next wrapped
+  $(".carousel-arrows .next").on("click", function () {
+    $carousel.flickity("next", true);
+  });
+
+  // variable for highest height
+  let maxHeight = 0;
+
+  // defining what im looping through, which in this case is .each .slide inside of .carousel
+  $(".carousel .slide-content.match-height").each(function () {
+    // this is referring to the slide in question thats being looped through
+    let thisHeight = $(this).outerHeight(true);
+    // simple if loop
+    if (thisHeight > maxHeight) {
+      maxHeight = thisHeight;
+    }
+    console.log(maxHeight);
+  });
+  $(".carousel .slide-content.match-height").css({ height: maxHeight + "px" });
 });
-
-// previous wrapped
-$('.carousel-arrows .previous').on( 'click', function() {
-  $carousel.flickity( 'previous', true );
-});
-
-// next wrapped
-$('.carousel-arrows .next').on( 'click', function() {
-  $carousel.flickity( 'next', true );
-});
-
-// variable for highest height
-let maxHeight = 0; 
-
-// defining what im looping through, which in this case is .each .slide inside of .carousel
-$('.carousel .slide-content').each(function() {
-  // this is referring to the slide in question thats being looped through
-  let thisHeight = $(this).outerHeight(true);
-  // simple if loop
-  if (thisHeight > maxHeight) {
-    maxHeight = thisHeight;
-  }
-});
-$('.carousel .slide-content').css({'height': maxHeight + 'px'});
-
-});
-
-
 
 // (function() {
 

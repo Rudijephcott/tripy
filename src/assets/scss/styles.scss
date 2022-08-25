@@ -13,21 +13,23 @@ $breakSNoUnit: 768;
   --pageMargin: calc(var(--pageMarginTotal) - (var(--gutter) / 2));
   --easingOut: cubic-bezier(0.16, 1, 0.3, 1);
   --easing: cubic-bezier(0.76, 0, 0.24, 1);
-  
+
   @media all and (max-width: $breakS) {
     --pageMarginTotal: 20px;
   }
 }
 
 @mixin fluidProp($prop, $min, $max) {
-  #{$prop}: #{$min + 'px'};
+  #{$prop}: #{$min + "px"};
   $diff: ($max - $min);
   $screenDiff: ($breakXLNoUnit - $breakSNoUnit);
   @media screen and (min-width: $breakS) {
-      #{$prop}: calc(#{$min + 'px'} + #{$diff} * ((100vw - #{$breakS}) / #{$screenDiff}));
+    #{$prop}: calc(
+      #{$min + "px"} + #{$diff} * ((100vw - #{$breakS}) / #{$screenDiff})
+    );
   }
   @media screen and (min-width: $breakXL) {
-      #{$prop}: #{$max + 'px'};
+    #{$prop}: #{$max + "px"};
   }
 }
 
@@ -64,10 +66,9 @@ $breakSNoUnit: 768;
 
 /* General Styles */
 body {
-  font-family: 'Barlow';
+  font-family: "Barlow";
   color: #808080;
-  background-color:#FDFDFD;
-  
+  background-color: #fdfdfd;
 }
 .nav-bar {
   padding: 20px 0px;
@@ -79,19 +80,18 @@ body {
   width: 100%;
   z-index: 1;
   box-shadow: 0px 0px 20px #808080;
-  
-
 }
 .nav-bar .columns {
   align-items: center;
 }
 .mobile-menu-container {
   display: none;
-  @media all and (max-width:$breakS){
+
+  @media all and (max-width: $breakS) {
     display: block;
   }
-  
 }
+
 .mobile-menu-link {
   display: flex;
   justify-content: flex-end;
@@ -99,10 +99,9 @@ body {
   a {
     position: relative;
     font-size: 20px;
-    color:#112B3C;
-    
+    color: #112b3c;
+
     &.active {
-      
       .icon-close {
         opacity: 1;
         transform: translate(-50%, -60%) rotate(-90deg);
@@ -111,7 +110,6 @@ body {
         opacity: 0;
         transform: rotate(-90deg);
       }
-    
     }
   }
   .icon-close {
@@ -120,12 +118,11 @@ body {
     left: 50%;
     transform: translate(-50%, -60%);
     opacity: 0;
-    
   }
-  .icon-close, .icon-menu {
+  .icon-close,
+  .icon-menu {
     transition: all 0.3s;
   }
-  
 }
 
 .logo img {
@@ -133,10 +130,11 @@ body {
   height: 29px;
   display: inline-flex;
 }
+
 .nav-items-container {
   display: flex;
   justify-content: center;
-  @media all and (max-width:$breakS) {
+  @media all and (max-width: $breakS) {
     display: none;
     &.show {
       display: flex;
@@ -149,18 +147,16 @@ body {
   align-self: center;
   column-gap: 40px;
   flex-wrap: wrap;
-  display:inline-flex;
+  display: inline-flex;
   position: relative;
 
-  @media all and (max-width:$breakS){
+  @media all and (max-width: $breakS) {
     column-gap: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 35px;
-    
   }
-  
 }
 // .target {
 //   position: absolute;
@@ -178,19 +174,19 @@ body {
 // }
 .nav-items a {
   text-decoration: none;
-  font-size: 20px; 
+  font-size: 20px;
   color: #808080;
   // width   : 200px;
-  // height  : 25px;   
+  // height  : 25px;
   position: relative;
-  z-index : 1;
+  z-index: 1;
   letter-spacing: 0.235px;
-  
 
   // transition: all .35s ease-in-out;
 }
+
 .nav-items a::after {
-  background-color: #E61C5D;
+  background-color: #e61c5d;
   content: "";
   width: 0;
   height: 4px;
@@ -201,22 +197,22 @@ body {
   position: absolute;
   border-radius: 20px;
 }
+
 .nav-items a:hover::after {
   width: 33%;
- 
 }
+
 .nav-items a:hover {
   color: black;
   font-weight: 500;
-  transition: color 1.2s ease 0s,
-  font-weight 1.2s ease 0s;
+  transition: color 1.2s ease 0s, font-weight 1.2s ease 0s;
   letter-spacing: 0.104px;
-  
 }
+
 .register-container {
   display: flex;
   justify-content: flex-end;
-  @media all and (max-width:$breakS) {
+  @media all and (max-width: $breakS) {
     display: none;
     &.show {
       display: flex;
@@ -226,19 +222,22 @@ body {
     }
   }
 }
+
 .register {
   display: inline-flex;
   column-gap: 30px;
   align-items: center;
 }
+
 .register a {
   text-decoration: none;
-  font-size: 20px; 
+  font-size: 20px;
   position: relative;
-  z-index : 1;
+  z-index: 1;
 }
+
 .login-button a::after {
-  background-color: #E61C5D;
+  background-color: #e61c5d;
   content: "";
   width: 0;
   height: 4px;
@@ -249,28 +248,28 @@ body {
   position: absolute;
   border-radius: 20px;
 }
+
 .login-button a:hover::after {
   width: 33%;
 }
 .login-button a:hover {
   color: black;
   font-weight: 500;
-  transition: color 1.2s ease 0s,
-  font-weight 1.2s ease 0s;
+  transition: color 1.2s ease 0s, font-weight 1.2s ease 0s;
 }
 
 .red-button a {
   display: inline-block;
   text-decoration: none;
   color: white;
-  background-color: #E61C5D;
+  background-color: #e61c5d;
   padding: 18px 24px;
   border-radius: 45px;
 }
 .red-button a:hover {
   background-color: white;
-  color: #E61C5D;
-  border: 1px solid #E61C5D;
+  color: #e61c5d;
+  border: 1px solid #e61c5d;
   padding: 18px 23px;
   transition: color 0.65s ease 0s, background-color 0.65s ease 0s;
 }
@@ -279,34 +278,34 @@ body {
 // }
 .text-box {
   margin-top: 290px;
-  @media all and (max-width:$breakS) {
+  @media all and (max-width: $breakS) {
     margin-top: 120px;
   }
   &.top {
     margin-top: 260px;
-    @media all and (max-width:$breakS) {
+    @media all and (max-width: $breakS) {
       margin-top: 130px;
     }
   }
   &.center {
     text-align: center;
-    @media all and (max-width:$breakS) {
+    @media all and (max-width: $breakS) {
       margin-top: 40px;
     }
   }
 }
 
 .text-box h1 {
-  color: #112B3C;
+  color: #112b3c;
   font-size: 64px;
-  @media all and (max-width:$breakS) {
+  @media all and (max-width: $breakS) {
     font-size: 32px;
   }
 }
 .text-box h2 {
   padding-top: 32px;
   font-weight: 400;
-  @media all and (max-width:$breakS) {
+  @media all and (max-width: $breakS) {
     font-size: 18px;
   }
 }
@@ -314,11 +313,11 @@ body {
   display: inline-block;
   margin-top: 134px;
   position: relative;
-  
+
   &.top {
     margin-top: 185px;
     width: 100%;
-    @media all and (max-width:$breakS) {
+    @media all and (max-width: $breakS) {
       margin-top: 50px;
     }
   }
@@ -329,8 +328,7 @@ body {
 
 .media-block {
   overflow: hidden;
-  
-  
+
   &.small {
     border-radius: 250px;
     position: absolute;
@@ -354,7 +352,6 @@ body {
   &.large-2 {
     border-radius: 200px;
     width: 70%;
-    
   }
   &.portrait {
     aspect-ratio: 9 / 16;
@@ -365,10 +362,10 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  } 
+  }
 }
 .purple-header {
-  color: #E61C5D;
+  color: #e61c5d;
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -383,7 +380,7 @@ body {
   flex-basis: 100px;
 }
 .stat-num {
-  color: #E61C5D;
+  color: #e61c5d;
   font-size: 40px;
   font-weight: bold;
 }
@@ -396,12 +393,11 @@ body {
 .carousel {
   margin-top: 80px;
   margin-bottom: 80px;
-  @media all and (max-width:$breakS) {
+  @media all and (max-width: $breakS) {
     margin-top: 50px;
     margin-bottom: 100px;
   }
- 
-  
+
   .flickity-viewport {
     overflow: visible;
   }
@@ -413,11 +409,10 @@ body {
     background-color: white;
     border-radius: 16px;
     box-shadow: 0px 0px 20px #808080;
-    @media all and (max-width:$breakS) {
+    @media all and (max-width: $breakS) {
       width: calc((100% - (2 * var(--gutter))) / 1);
-
     }
-    
+
     .slide-img {
       aspect-ratio: 37 / 31;
     }
@@ -449,11 +444,10 @@ body {
     height: 350px;
     border-radius: 16px;
     box-shadow: 0px 0px 20px #808080;
-    @media all and (max-width:$breakS) {
+    @media all and (max-width: $breakS) {
       width: calc((100% - (2 * var(--gutter))) / 1);
-
     }
-    
+
     .slide-content {
       padding: 0px 40px 60px 40px;
     }
@@ -464,42 +458,36 @@ body {
       margin-top: 46px;
     }
   }
-  
- 
 }
 
 .carousel-arrows {
   margin-top: 380px;
   position: relative;
-  @media all and (max-width:$breakS) {
+  @media all and (max-width: $breakS) {
     margin-top: 100px;
   }
 
   &.alt-2 {
     position: absolute;
     transform: translate(0px, -145px);
-     @media all and (max-width:$breakS) {
-     margin-top: 130px;
-     display: none;
-  }
-  }
- 
-  &.alt {
-    margin-top: 30px;
-    @media all and (max-width:$breakS) {
+    @media all and (max-width: $breakS) {
       margin-top: 130px;
       display: none;
-   }
-    
+    }
+  }
+
+  &.alt {
+    margin-top: 30px;
+    @media all and (max-width: $breakS) {
+      margin-top: 130px;
+      display: none;
+    }
 
     img {
       position: absolute;
       transform: translate(0px, 200px);
-      
     }
-    
   }
-
 }
 
 .carousel-arrows img {
@@ -511,38 +499,37 @@ body {
   cursor: pointer;
 }
 .quote-container-2 {
-position: relative;
-padding: 10px;
-left: 145px;
-top: -6px;
-@media all and (max-width:$breakS) {
-  top: 26px;
-  left: 60px;
-}
+  position: relative;
+  padding: 10px;
+  left: 145px;
+  top: -6px;
+  @media all and (max-width: $breakS) {
+    top: 26px;
+    left: 60px;
+  }
   svg {
     height: 33.33px;
     width: 33.33px;
     z-index: 1;
-    color: #E61C5D;
+    color: #e61c5d;
   }
 }
 .slide-header {
   font-size: 20px;
   font-weight: bold;
-  color: #112B3C;
-  
+  color: #112b3c;
 }
 .slide-location {
   font-size: 14px;
   font-weight: 400;
-  color: #112B3C;
+  color: #112b3c;
   padding-top: 8px;
 }
 .slide-rating {
   padding: 4px 6px;
-  color: #FFBD39;
+  color: #ffbd39;
   font-weight: bold;
-  background-color: rgba($color: #FFBD39, $alpha: 0.12);
+  background-color: rgba($color: #ffbd39, $alpha: 0.12);
   display: inline-flex;
   border-radius: 38px;
   align-items: center;
@@ -557,27 +544,26 @@ top: -6px;
 .slide-num {
   font-size: 26px;
   font-weight: bold;
-  color: #E61C5D;
+  color: #e61c5d;
 }
 .testimonial-text {
   text-align: center;
 }
 
-
 .slide-name {
-  color: #112B3C;
+  color: #112b3c;
   font-size: 18px;
   font-weight: bold;
   padding-top: 12px;
 }
 .slide-job {
-  color: #112B3C;
+  color: #112b3c;
   font-size: 14px;
   font-weight: 400;
   padding-top: 8px;
 }
 .slide-testimonial {
-  color: #112B3C;
+  color: #112b3c;
   font-size: 14px;
   font-weight: 400;
 }
@@ -607,19 +593,19 @@ top: -6px;
   &.four {
     align-self: flex-start;
   }
- 
+
   img {
     border-radius: 16px;
     padding: 6px 7px 0px 7px;
   }
 }
 .text {
-  color: #112B3C;
+  color: #112b3c;
   &.big {
     font-size: 18px;
     font-weight: bold;
     padding: 13px 0px 8px 10px;
-    @media all and (max-width:$breakS) {
+    @media all and (max-width: $breakS) {
       font-size: 12px;
       padding: 4px 0 4px 4px;
     }
@@ -628,144 +614,131 @@ top: -6px;
     font-size: 14px;
     font-weight: bold;
     padding: 13px 0px 8px 10px;
-    @media all and (max-width:$breakS) {
+    @media all and (max-width: $breakS) {
       font-size: 12px;
       padding: 4px 0 4px 4px;
-
     }
   }
 }
 .price-time-container {
-  display:inline-flex;
-  @media all and (max-width:$breakS) {
+  display: inline-flex;
+  @media all and (max-width: $breakS) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    
-   }
-
-  
+  }
 }
 .price {
-  color: #E61C5D;
+  color: #e61c5d;
   padding-left: 10px;
-  @media all and (max-width:$breakS) {
+  @media all and (max-width: $breakS) {
     font-size: 8px;
-    
-   }
+  }
 
   &.big {
-  font-size: 20px;
-  font-weight: bold;
-  padding-bottom: 10px;
-  @media all and (max-width:$breakS) {
-    font-size: 12px;
-    padding-bottom: 4px;
- 
-   }
-}
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    @media all and (max-width: $breakS) {
+      font-size: 12px;
+      padding-bottom: 4px;
+    }
+  }
   &.small {
-  font-size: 16px;
-  font-weight: bold;
-  padding-bottom: 15px;
-  @media all and (max-width:$breakS) {
-    font-size: 12px;
-    padding-bottom: 4px;
-   }
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    @media all and (max-width: $breakS) {
+      font-size: 12px;
+      padding-bottom: 4px;
+    }
   }
 }
 .time {
   padding-left: 15px;
   margin-top: 3px;
-  @media all and (max-width:$breakS) {
+  @media all and (max-width: $breakS) {
     font-size: 10px;
     padding-left: 4px;
     margin-top: 0px;
-   }
+  }
   &.big {
-  font-size: 14px;
-  font-weight: 500;
-  @media all and (max-width:$breakS) {
-    font-size: 10px;
-    margin-top: 0px;
-    padding-left: 4px;
-   }
-}
+    font-size: 14px;
+    font-weight: 500;
+    @media all and (max-width: $breakS) {
+      font-size: 10px;
+      margin-top: 0px;
+      padding-left: 4px;
+    }
+  }
   &.small {
-  font-size: 10px;
-  font-weight: 500;
-  @media all and (max-width:$breakS) {
     font-size: 10px;
-    margin-top: 0px;
-    padding-left: 6px;
-   }
+    font-weight: 500;
+    @media all and (max-width: $breakS) {
+      font-size: 10px;
+      margin-top: 0px;
+      padding-left: 6px;
+    }
   }
 }
 .footer-header {
   font-size: 18px;
   font-weight: bold;
-  color: #112B3C;
-  @media all and (max-width:$breakS) {
-   
+  color: #112b3c;
+  @media all and (max-width: $breakS) {
     padding-bottom: 30px;
     margin-right: 30px;
- 
-   }
+  }
 }
 
-.starter-block, .center-block {
+.starter-block,
+.center-block {
   margin-top: 240px;
   padding-bottom: 100px;
   font-size: 14px;
   font-weight: 400;
-  color: #112B3C;
+  color: #112b3c;
   justify-content: center;
-   li {
+  li {
     padding-bottom: 18px;
-    @media all and (max-width:$breakS) {
+    @media all and (max-width: $breakS) {
       padding-bottom: 6px;
-      
     }
   }
-  @media all and (max-width:$breakS) {
-   margin-top: 40px;
-   padding-bottom: 30px;
-   margin-right: 40px;
-
+  @media all and (max-width: $breakS) {
+    margin-top: 40px;
+    padding-bottom: 30px;
+    margin-right: 40px;
   }
   .center-block {
-    @media all and (max-width:$breakS) {
+    @media all and (max-width: $breakS) {
       margin-left: 30px;
-   
-     }
+    }
   }
   .start-block {
-    @media all and (max-width:$breakS) {
+    @media all and (max-width: $breakS) {
       margin-top: 0;
       padding-bottom: 30px;
       margin-right: 0;
       display: flex;
-      
-     }
-     li {
-      @media all and (max-width:$breakS) {
+    }
+    li {
+      @media all and (max-width: $breakS) {
         align-self: center;
-     
-       }
-     }
+      }
+    }
   }
 }
-.starter-block li svg{
+.starter-block li svg {
   width: 24px;
   height: 24px;
-  color: #E61C5D;
+  color: #e61c5d;
   margin-right: 12px;
 }
 .stars {
-  color: #FFBD39;
+  color: #ffbd39;
   padding-top: 4px;
   padding-bottom: 12px;
-  
 }
 
 .end-block {
@@ -773,8 +746,8 @@ top: -6px;
   padding-bottom: 100px;
   font-size: 14px;
   font-weight: 400;
-  color: #112B3C;
-  @media all and (max-width:$breakS) {
+  color: #112b3c;
+  @media all and (max-width: $breakS) {
     margin-top: 40px;
     padding-bottom: 70px;
     margin-left: 30px;
@@ -788,7 +761,6 @@ top: -6px;
 }
 .footer-header {
   padding-bottom: 18px;
-
 }
 .footer-text {
   padding-bottom: 18px;
@@ -804,13 +776,12 @@ top: -6px;
   margin-right: 80px;
   margin-left: 18px;
   border: none;
-  
 }
 .email-button svg {
   height: 32px;
   width: 32px;
-  background-color: #E61C5D;
-  color: #FDFDFD;
+  background-color: #e61c5d;
+  color: #fdfdfd;
   padding: 4px;
   border-radius: 50%;
   margin-right: 8px;

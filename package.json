@@ -5,9 +5,9 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
-    "build:parcel": "parcel build --public-url http://clients.harryjatkins.com/rudi/tripy",
+    "build:parcel": "parcel build --public-url https://work.rudijephcott.com/tripy/",
     "clean": "rm -rf dist/*",
-    "build": "npm run clean && npm run build:parcel"
+    "build": "npm run build:parcel"
   },
   "author": "",
   "license": "ISC",
